@@ -51,7 +51,7 @@ object Main {
 
   def main(args: Array[String]): Unit = {
     val sparkConf = new SparkConf()
-      .setMaster("local[16]") //The number of CPUs to use.
+      .setMaster("local[1]") //The number of threads to use.
       .setAppName("Skyline")
     val spark = SparkSession.builder().config(sparkConf).getOrCreate()
     val sc = spark.sparkContext
